@@ -1,0 +1,32 @@
+# Macro file for 12 cm x 12 cm x 10 cm box shaped sample
+#
+#
+
+/run/initialize
+/control/verbose 1
+/run/verbose 1
+
+# list the existing physics processes
+/process/list
+
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/centre 0. 0. 5.1 cm
+#/gps/pos/rot1 1 0 0
+#/gps/pos/rot2 0 0 1
+/gps/pos/halfx 6. cm
+/gps/pos/halfy 6. cm
+/gps/pos/halfz 5. cm
+/gps/pos/paralp 0. rad
+/gps/pos/parthe 0. rad
+/gps/pos/parphi 0. rad
+
+/gps/particle gamma
+/gps/ang/type iso
+/gps/ene/mono 46.539 keV
+#46.539 keV line of Pb-210
+
+/analysis/setFileName GeRabbit_12x12x10cm3Box_46keV_100kEvt_flushCenteredAtFace_foam
+
+/run/printProgress 10000
+/run/beamOn 100000
